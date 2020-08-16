@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name  Old Reddit Markdown Editor
+// @name Old Reddit Markdown Editor
 // @description Adds a togglable markdown editor to (old) reddit.
-// @author  Arxk
+// @author Arxk
 // @namespace https://gist.github.com/Arxk/7ebc8c0118773c7e94ac842544d081fa
 // @homepageURL https://github.com/Arxk/scripts
 // @license MIT

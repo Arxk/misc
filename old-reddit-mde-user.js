@@ -233,6 +233,16 @@ insertionQ('.comment .usertext-edit').every((editor) => {
 		}
 	}
 	toggleEditor(editor);
+	const cancel = editor.querySelector('.bottom-area > .usertext-buttons .cancel');
+	const listener = cancel.addEventListener('click', (e) => {
+		const editor = e.target.parentNode.parentNode.parentNode;
+		const textarea = editor.querySelector('.md textarea');
+		if (textarea.simplemde !== undefined) {
+			textarea.value = '';
+			textarea.simplemde.toTextArea();
+			textarea.simplemde = undefined;
+		}
+	}, { once: true });
 });
 
 
@@ -240,7 +250,7 @@ insertionQ('.comment .usertext-edit').every((editor) => {
  * Appends Toggle button to View post & New post
  */
 
-addEventListener('load', function () {
+addEventListener('load', () => {
 	const post = document.querySelector('.commentarea > .usertext > .usertext-edit');
 	if (post !== null) {
 		toggleEditor(post);

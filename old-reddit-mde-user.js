@@ -253,10 +253,10 @@ insertionQ('.comment .usertext-edit').every((editor) => {
 addEventListener('load', () => {
 	const post = document.querySelector('.commentarea > .usertext > .usertext-edit');
 	if (post !== null) {
-		toggleEditor(post);
+		toggleEditor(post, false);
 	}
 	const create = document.querySelector('.roundfield-content > .usertext > .usertext-edit');
 	if (create !== null) {
-		toggleEditor(create);
+		toggleEditor(create, false);
 	}
 });
